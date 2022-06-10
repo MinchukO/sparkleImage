@@ -123,7 +123,7 @@
       }
        &__favorite {
          @extend %circle-icons;
-        background-image: url(../images/icons/heart.svg);
+        background-image: url(./../images/icons/heart.svg);
       }
        &__cart {
         @extend %circle-icons;
