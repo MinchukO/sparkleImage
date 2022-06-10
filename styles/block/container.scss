@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  max-width: 1200px + 2 * $container-paddingX;
+  //width: calc(100% - 2 * #{$container-paddingX});
+  padding: 0 $container-paddingX;
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    padding: 0 $container-paddingX / 2;
+  }
+  @media (max-width: 450px) {
+    padding: 0 $container-paddingX / 3;
+  }
+}

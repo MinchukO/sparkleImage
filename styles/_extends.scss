@@ -29,3 +29,14 @@
   align-items: center;
   color: $color-img-button;
 }
+
+%circle-icons {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $background-button-green;
+  color: $color-img-button;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -8,10 +8,49 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.scss">
+  <link rel="stylesheet" href="styles/main.css">
   <title>Sparlke Image</title>
 </head>
-<body>
+<body class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__top__tablets">
+          <a href="#" class="header__top__tablets__menu-toggler"></a>
+          <a class="header__top__tablets__search" href="/"></a>
+        </div>
+        <a href="#">
+          <img class="header__top__logo" src="images/SparkleLogo.png" alt="Sparlke Image">
+        </a>
+        <div class="header__top__right-menu">
+          <form class="header__top__right-menu__search" action="#">
+            <input 
+              class="header__top__right-menu__search__input"
+              placeholder="Search"
+              type="search"
+            >
+            <button class="header__top__right-menu__search__button" type="submit"></button>
+          </form>
+          <a class="header__top__right-menu__signIn" href="/"></a>
+          <a class="header__top__right-menu__favorite" href="/"></a>
+          <a class="header__top__right-menu__cart" href="/"></a>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="header__nav__list">
+          <a href="" class="header__nav__list__link is-active">Confectionery</a>
+          <a href="" class="header__nav__list__link">Baby Care</a>
+          <a href="" class="header__nav__list__link">Drinks</a>
+          <a href="" class="header__nav__list__link">Health & Beuty</a>
+          <a href="" class="header__nav__list__link">Household</a>
+          <a href="" class="header__nav__list__link">News Agent</a>
+          <a href="" class="header__nav__list__link">Office</a>
+          <a href="" class="header__nav__list__link">Pet & Garden</a>
+          <a href="" class="header__nav__list__link">Special Offers</a>
+        </div>
+      </nav>
+    </div>
+  </header>
   
 </body>
 </html>
