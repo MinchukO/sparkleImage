@@ -39,13 +39,13 @@
         width: 35px;
         height: 35px;
         display: none;
-        background-image: url(../../images//icons/Icon-Burger-menu.svg);
+        background-image: url(../images//icons/Icon-Burger-menu.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       
         &:hover {
-          background-image: url(../../images/icons/Icon-Burger-menu-hover.svg);
+          background-image: url(../images/icons/Icon-Burger-menu-hover.svg);
       }
 
        @media(max-width: 1227px) {
@@ -55,7 +55,7 @@
       &__search {
         display: none;
         @extend %circle-icons;
-        background-image: url(../../images/icons/search.svg);
+        background-image: url(../images/icons/search.svg);
 
         @media (max-width:980px) {
             display:block;
@@ -109,7 +109,7 @@
           height: 16px;
           width: 16px;
           padding-left: 10px;
-          background-image: url(../../images/icons/search.svg);
+          background-image: url(../images/icons/search.svg);
           background-size: cover;
           border: none;
         }
@@ -119,15 +119,15 @@
       }
       &__signIn {
         @extend %circle-icons;
-        background-image: url(../../images/icons/person.svg);
+        background-image: url(../images/icons/person.svg);
       }
        &__favorite {
          @extend %circle-icons;
-        background-image: url(../../images/icons/heart.svg);
+        background-image: url(../images/icons/heart.svg);
       }
        &__cart {
         @extend %circle-icons;
-        background-image: url(../../images/icons/cart.svg);
+        background-image: url(../images/icons/cart.svg);
       }
     }
   }
