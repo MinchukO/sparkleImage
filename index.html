@@ -16,20 +16,20 @@
     <div class="container">
       <div class="header__top">
         <div class="header__top__tablets">
-          <a href="#" class="header__top__tablets__menu-toggler"></a>
-          <a class="header__top__tablets__search" href="/"></a>
+          <a href="#menu" class="header__top__tablets__menu-toggler"></a>
+          <a class="header__top__tablets__search" href="#search"></a>
         </div>
         <a href="#">
           <img class="header__top__logo" src="images/SparkleLogo.png" alt="Sparlke Image">
         </a>
         <div class="header__top__right-menu">
-          <form class="header__top__right-menu__search" action="#">
+          <form class="header__top__right-menu__search" action="#" id="search">
             <input 
               class="header__top__right-menu__search__input"
               placeholder="Search"
               type="search"
             >
-            <button class="header__top__right-menu__search__button" type="submit"></button>
+          <button class="header__top__right-menu__search__button" type="submit"></button>
           </form>
           <a class="header__top__right-menu__signIn" href="/"></a>
           <a class="header__top__right-menu__favorite" href="/"></a>
@@ -37,20 +37,345 @@
         </div>
       </div>
       <nav class="header__nav">
-        <div class="header__nav__list">
-          <a href="" class="header__nav__list__link is-active">Confectionery</a>
-          <a href="" class="header__nav__list__link">Baby Care</a>
-          <a href="" class="header__nav__list__link">Drinks</a>
-          <a href="" class="header__nav__list__link">Health & Beuty</a>
-          <a href="" class="header__nav__list__link">Household</a>
-          <a href="" class="header__nav__list__link">News Agent</a>
-          <a href="" class="header__nav__list__link">Office</a>
-          <a href="" class="header__nav__list__link">Pet & Garden</a>
-          <a href="" class="header__nav__list__link">Special Offers</a>
-        </div>
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link is-active">Confectionery</a>
+            <ul class="header__nav__sub-list slideInUp">
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">sub-menu</a>
+                <ul class="header__nav__sub-sub-list">
+                  <li class="header__nav__sub-sub-list__sub-sub-item">
+                    <a href="" class="header__nav__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                  </li>
+                  <li class="header__nav__sub-sub-list__sub-sub-item">
+                    <a href="" class="header__nav__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                  </li>
+                  <li class="header__nav__sub-sub-list__sub-sub-item">
+                    <a href="" class="header__nav__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                  </li>
+                  <li class="header__nav__sub-sub-list__sub-sub-item">
+                    <a href="" class="header__nav__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                  </li>
+                  <li class="header__nav__sub-sub-list__sub-sub-item">
+                    <a href="" class="header__nav__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">sub-menu</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Baby Care</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Drinks</a>
+            <ul class="header__nav__sub-list">
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">Baby Care</a>
+              </li>
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">Drinks</a>
+              </li>
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">Baby Care</a>
+              </li>
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">Drinks</a>
+              </li>
+              <li class="header__nav__sub-list__sub-item">
+                <a href="" class="header__nav__sub-list__sub-item__sub-link">Health & Beuty</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Health & Beuty</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Household</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">News Agent</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Office</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Pet & Garden</a>
+          </li>
+          <li class="header__nav__list__item">
+            <a href="" class="header__nav__list__item__link">Special Offers</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
-  
+  <nav class="mobile-menu" id="menu">
+    <div class="container">
+      <div class="mobile-menu__top">
+        <a href="#" class="mobile-menu__top__cross"></a>
+        <a href="/">
+          <img class="mobile-menu__top__logo" src="images/SparkleLogo.png"
+            alt="Sparlke Image">
+        </a>
+      </div>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__list__item">
+          <a href="" class="mobile-menu__list__item__link parent-item is-active">Confectionery</a>
+          <ul class="mobile-menu__sub-list">
+            <li class="mobile-menu__sub-list__sub-item">
+              <a href="#" class="mobile-menu__sub-list__sub-item__sub-link parent-item">sub-menu</a>
+              <ul class="mobile-menu__sub-sub-list">
+                <li class="mobile-menu__sub-sub-list__sub-sub-item">
+                  <a href="#"
+                    class="mobile-menu__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                </li>
+                <li class="mobile-menu__sub-sub-list__sub-sub-item">
+                  <a href="#"
+                    class="mobile-menu__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                </li>
+                <li class="mobile-menu__sub-sub-list__sub-sub-item">
+                  <a href="#"
+                    class="mobile-menu__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                </li>
+                <li class="mobile-menu__sub-sub-list__sub-sub-item">
+                  <a href="#"
+                    class="mobile-menu__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                </li>
+                <li class="mobile-menu__sub-sub-list__sub-sub-item">
+                  <a href="#"
+                    class="mobile-menu__sub-sub-list__sub-sub-item__sub-sub-link">sub-sub-menu</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__sub-list__sub-item">
+              <a href="#" class="mobile-menu__sub-list__sub-item__sub-link">sub-menu</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Baby Care</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Drinks</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Health & Beuty</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Household</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">News Agent</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Office</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Pet & Garden</a>
+        </li>
+        <li class="mobile-menu__list__item">
+          <a href="#" class="mobile-menu__list__item__link">Special Offers</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  <main class="container">
+    <div class="wrapper">
+      <h2 class="wrapper__title">Confectionery</h2>
+      <div class="wrapper__sub-title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+    <div class="fiters">
+      <div class="fiters__setects">
+        <div class="fiters__setects__title">Filters</div>
+        <div class="fiters__setects__left">
+          <input type="text">
+          <input type="text">
+        </div>
+        <input type="text">
+        <span>Result</span>
+        <section class="product-cards">
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19 (1).png" alt="" class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              REESES PEANUT BUTTER MINIS 150G
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+              </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65</p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart" href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart" href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19 (2).png" alt=""
+              class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              CADBURY FINGERS MILK CHOCLATE
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                        </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65
+                </p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19.png" alt=""
+              class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              NATURE VALLEY CRUCNHY OATS
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                        </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65
+                </p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19 (1).png" alt=""
+              class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              REESES PEANUT BUTTER MINIS 150G
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                        </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65
+                </p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19 (1).png" alt=""
+              class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              REESES PEANUT BUTTER MINIS 150G
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                        </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65
+                </p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-qa="card">
+            <img src="images/Rectangle 19 (1).png" alt=""
+              class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              REESES PEANUT BUTTER MINIS 150G
+            </h3>
+            <div class="product-cards__product-card__count">
+              <!--<div class="stars stars--active">
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                          <div class="stars__star"></div>
+                        </div>-->
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">&#8364;1.65
+                </p>
+                <p class="product-cards__product-card__bottom__price__value">1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="card-hover"></a>
+                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-qa="card-hover"></a>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

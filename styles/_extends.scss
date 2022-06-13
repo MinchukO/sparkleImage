@@ -23,10 +23,10 @@
 }
 
 %button {
-  background-color: $background-button-green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: $background-button-purple;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
   color: $color-img-button;
 }
 
@@ -39,4 +39,12 @@
   color: $color-img-button;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+%mobile-icons {
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
