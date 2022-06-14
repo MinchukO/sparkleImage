@@ -33,7 +33,11 @@
           </form>
           <a class="header__top__right-menu__signIn" href="/"></a>
           <a class="header__top__right-menu__favorite" href="/"></a>
-          <a class="header__top__right-menu__cart" href="/"></a>
+          <span class="header__top__right-menu__cart-wrapper">
+            <span class="header__top__right-menu__cart-wrapper__number">1</span>
+            <a class="header__top__right-menu__cart-wrapper__cart" href="/"></a>
+          </span>
+          
         </div>
       </div>
       <nav class="header__nav">
@@ -189,29 +193,42 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </div>
     </div>
-    <div class="fiters">
-      <div class="fiters__setects">
-        <div class="fiters__setects__title">Filters</div>
-        <div class="fiters__setects__left">
-          <input type="text">
-          <input type="text">
-        </div>
-        <input type="text">
+    <div class="filters">
+      <div class="filters__selects">
+        <div class="filters__selects__title">Filters</div>
+        <button id="select" class="filters__selects__dropdown">by brend</button>
+        <ul class="filters__selects__list">
+          <li class="filters__selects__list__item" data-value="Ferrer">Ferrer</li>
+          <li class="filters__selects__list__item" data-value="2">2</li>
+          <li class="filters__selects__list__item" data-value="3">3</li>
+          <li class="filters__selects__list__item" data-value="4">4</li>
+        </ul>
         <span>Result</span>
+        <div class="wrapper-filter-result"></div>
+        <!--<form class="filters__selects__left">
+          <select  multiple>
+            <option value="1" selected>by brend</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option>4</option>
+            <option value="Ferrero">Ferrero</option>
+          </select>
+          
+          
+        </form>
+        <input type="text">-->
+        
         <section class="product-cards">
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="01">
             <img src="images/Rectangle 19 (1).png" alt="" class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               REESES PEANUT BUTTER MINIS 150G
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                <div class="stars__star"></div>
-                <div class="stars__star"></div>
-                <div class="stars__star"></div>
-                <div class="stars__star"></div>
-                <div class="stars__star"></div>
-              </div>-->
+              <div class="product-cards__product-card__count__items-control" data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1</div>
+              <div class="product-cards__product-card__count__items-control" data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -219,25 +236,32 @@
                 <p class="product-cards__product-card__bottom__price__value">1.90</p>
               </div>
               <div class="product-cards__product-card__bottom__buttons">
-                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart" href="#" data-qa="card-hover"></a>
-                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart" href="#" data-qa="card-hover"></a>
+                <button 
+                  type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="heart">
+                </button>
+                <button type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#"
+                  data-cart>
+                </button>
               </div>
             </div>
           </div>
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="02">
             <img src="images/Rectangle 19 (2).png" alt=""
               class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               CADBURY FINGERS MILK CHOCLATE
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                        </div>-->
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1
+              </div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -246,27 +270,34 @@
                 <p class="product-cards__product-card__bottom__price__value">1.90</p>
               </div>
               <div class="product-cards__product-card__bottom__buttons">
-                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
-                  href="#" data-qa="card-hover"></a>
-                <a class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
-                  href="#" data-qa="card-hover"></a>
+                <button
+                  type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" 
+                  data-qa="heart">
+                </button>
+                <button 
+                  type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" 
+                  data-cart>
+                </button>
               </div>
             </div>
           </div>
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="03">
             <img src="images/Rectangle 19.png" alt=""
               class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               NATURE VALLEY CRUCNHY OATS
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                        </div>-->
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1
+              </div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -282,20 +313,19 @@
               </div>
             </div>
           </div>
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="04">
             <img src="images/Rectangle 19 (1).png" alt=""
               class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               REESES PEANUT BUTTER MINIS 150G
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                        </div>-->
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1
+              </div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -311,20 +341,19 @@
               </div>
             </div>
           </div>
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="05">
             <img src="images/Rectangle 19 (1).png" alt=""
               class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               REESES PEANUT BUTTER MINIS 150G
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                        </div>-->
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1
+              </div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -340,20 +369,19 @@
               </div>
             </div>
           </div>
-          <div class="product-cards__product-card product-card" data-qa="card">
+          <div class="product-cards__product-card product-card" data-id="06">
             <img src="images/Rectangle 19 (1).png" alt=""
               class="product-cards__product-card__img">
             <h3 class="product-cards__product-card__title">
               REESES PEANUT BUTTER MINIS 150G
             </h3>
             <div class="product-cards__product-card__count">
-              <!--<div class="stars stars--active">
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                          <div class="stars__star"></div>
-                        </div>-->
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>1
+              </div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
             </div>
             <div class="product-cards__product-card__bottom">
               <div class="product-cards__product-card__bottom__price">
@@ -377,5 +405,7 @@
     </div>
   </main>
   <script src="scripts/main.js"></script>
+  <script src="scripts/counter.js"></script>
+  <script src="scripts/cart.js"></script>
 </body>
 </html>

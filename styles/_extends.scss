@@ -48,3 +48,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+%counter {
+   border: 1px solid #D5D5D5;
+   padding: 16px 8px;
+   width: 48px;
+   height: 52px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
