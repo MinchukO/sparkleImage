@@ -1,3 +1,17 @@
+.visible {
+  position: absolute !important;
+  visibility: visible !important;
+  top: 0 !important;
+  right: -50%;
+  transform: translate(50%, 100%);
+  transition: transform 0.5s ease-in 0s;
+  background-color: #F5F5F5;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
 .header {
   @include font('Montserrat', '400', '20px');
   position: sticky;
@@ -8,11 +22,11 @@
   //height: $header-height;
   padding-top: 62px;
   background-color: $background-body;
-  @media (max-width: 900px) {
-    padding-top: 32px;;
+  @media (max-width: 1280px) {
+    padding: 32px 0 10px;
   }
   @media (max-width: 450px) {
-    padding-top: 15px;;
+    padding: 15px 0 10px;
   }
 
   &__top {
@@ -20,9 +34,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-     @media (max-width:700px) {
-        margin-bottom: 20px;
+     @media (max-width:1280px) {
+        margin-bottom: 0;
       }
+
 
     &__tablets {
       align-items: center;
@@ -51,23 +66,13 @@
       }
     }
       &__search {
-        opacity: 0;
-        pointer-events: none;
+        display: none;
+        position: relative;
         @extend %circle-icons;
-        background-image: url(../images/icons/search.svg);
+        background-image: url(/../images//icons/search-white.svg);
 
         @media (max-width:980px) {
-            opacity: 1;
-            pointer-events: all;
-            &:hover::after {
-              content: 'sdfghnmbvc';
-              display: block;
-              width: max-content;
-              transform: translateY(100%);
-              color: rebeccapurple;
-              padding: 10px 0;
-              opacity: 1;
-            }
+            display: block;
           }
       }
     }           &:target {
@@ -84,9 +89,9 @@
       max-width: 326px;
 
       @media (max-width:700px) {
-        width: 150px;
+        width: 200px;
       }
-      @media (max-width:400px) {
+      @media (max-width:515px) {
         display: none;
       }
     }
@@ -126,8 +131,10 @@
           background-size: cover;
           border: none;
         }
-         @media (max-width:980px) {
-            display: none;
+        @media (max-width:980px) {
+            visibility: hidden;
+            position: absolute;
+            top: -1000px;
           }
       }
       &__signIn {

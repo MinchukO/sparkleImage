@@ -17,20 +17,22 @@
       <div class="header__top">
         <div class="header__top__tablets">
           <a href="#menu" class="header__top__tablets__menu-toggler"></a>
-          <a class="header__top__tablets__search" href="#search"></a>
         </div>
         <a href="#">
           <img class="header__top__logo" src="images/SparkleLogo.png" alt="Sparlke Image">
         </a>
+
         <div class="header__top__right-menu">
-          <form class="header__top__right-menu__search" action="#" id="search">
-            <input 
-              class="header__top__right-menu__search__input"
-              placeholder="Search"
-              type="search"
-            >
-          <button class="header__top__right-menu__search__button" type="submit"></button>
-          </form>
+         <div class="search-wrapper">
+            <a class="header__top__tablets__search" href="#search"></a>
+            <form class="header__top__right-menu__search" action="#" id="search">
+                <input class="header__top__right-menu__search__input" placeholder="Search"
+                  type="search">
+                <button class="header__top__right-menu__search__button"
+                  type="submit"></button>
+              </form>
+        </div>
+         
           <a class="header__top__right-menu__signIn" href="/"></a>
           <a class="header__top__right-menu__favorite" href="/"></a>
           <span class="header__top__right-menu__cart-wrapper">
@@ -119,10 +121,6 @@
     <div class="container">
       <div class="mobile-menu__top">
         <a href="#" class="mobile-menu__top__cross"></a>
-        <a href="/">
-          <img class="mobile-menu__top__logo" src="images/SparkleLogo.png"
-            alt="Sparlke Image">
-        </a>
       </div>
       <ul class="mobile-menu__list">
         <li class="mobile-menu__list__item">
@@ -445,7 +443,9 @@
     </div>
   </main>
   <script src="scripts/main.js"></script>
+  <script src="scripts/filter.js"></script>
   <script src="scripts/counter.js"></script>
   <script src="scripts/cart.js"></script>
+  <script src="scripts/search.js"></script>
 </body>
 </html>

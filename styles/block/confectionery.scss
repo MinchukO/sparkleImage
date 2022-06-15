@@ -149,7 +149,9 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   gap: 101px 81px;
-
+  @media (max-width:900px) {
+    gap: 50px 60px;
+  }
     &__product-card {
       max-width: 388px;
       padding: 29px 14px 14px;
@@ -198,7 +200,7 @@
           justify-content: space-between;
           margin-bottom: 26px;
           &__price {
-          
+          position: relative;
             &__label {
               @include font('Inter', '700', '34px');
               letter-spacing: -1px;
@@ -206,8 +208,12 @@
               line-height: 130.52%;
             }
             &__value {
-              font-size: 16px;
-              font-weight: 700;
+              position: absolute;
+              top: 0;
+              right: -50px;
+              @include font('Inter', '700', '20px');
+              text-decoration: line-through;
+              color: #D4D4D4;
             }
           }
           &__buttons {
