@@ -1,4 +1,4 @@
-//For dropdown
+//For dropdown mrnu
 
 const parentItems = document.querySelectorAll('.parent-item')
 
@@ -8,7 +8,8 @@ parentItems.forEach(item => {
   })
 })
 
-//Filter
+//Filter for standart select
+
 //const val = document.querySelector('#select')
 //const filterChoice = document.querySelector('.filterResult')
 
@@ -22,24 +23,71 @@ parentItems.forEach(item => {
 //}) 
   
 //filter custom
-const button = document.querySelector('#select')
-const dropdown = document.querySelector('.filters__selects__list')
-const filterChoice = document.querySelector('.wrapper-filter-result')
 
-button.addEventListener('click', (e) => {
-  e.preventDefault()
-  dropdown.classList.toggle('filters__selects__list--visible')
-})
+document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
+  
+  const button = itemWrappper.querySelector(
+    ".filters__selects__left-filter__dropdown"
+  );
+  const dropdown = itemWrappper.querySelector(
+    ".filters__selects__left-filter__list"
+  );
+  const filterChoice = document.querySelector(".wrapper-filter-result");
+    
+  button.addEventListener("click", () => {
+    
+    dropdown.classList.toggle("filters__selects__left-filter__list--visible");
+  });
 
-const list = document.querySelectorAll('.filters__selects__list__item')
-console.log(list)
-list.forEach(item => {
-  item.addEventListener('click', function() {
-   
-    filterChoice.insertAdjacentHTML('beforeend', `
-    <span class="wrapper-filter-result__item">${this.innerText}</span>`) 
-    dropdown.classList.remove('filters__selects__list--visible')
+  //закрытие по клику снаружи
+  document.addEventListener('click', (e) => {
+    if (e.target !== itemWrappper.querySelector(
+    ".filters__selects__left-filter__dropdown"
+  )) {
+      dropdown.classList.remove("filters__selects__left-filter__list--visible");
+    }
   })
-})
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' || e.tab === 'Tab') {
+      dropdown.classList.remove("filters__selects__left-filter__list--visible");
+    }
+  })
+  const list = dropdown.querySelectorAll(
+    ".filters__selects__left-filter__list__item"
+  );
+
+  list.forEach((item) => {
+    item.addEventListener("click", function () {
+      filterChoice.insertAdjacentHTML(
+        "beforeend",
+        `
+          <span class="wrapper-filter-result__item">
+            ${this.innerText}
+            <span class="wrapper-filter-result__item__cross"></span>
+          </span>
+        `
+      );
+      dropdown.classList.remove("filters__selects__left-filter__list--visible");
+      
+
+      document.querySelector(".wrapper-filter-result"). addEventListener('click', (e) => {
+        if (!e.target.matches(".wrapper-filter-result__item__cross")) {
+          return;
+        }
+        e.target.closest(".wrapper-filter-result__item").remove()
+      })
+    });
+  });
+});
 
 
+
+
+
+
+
+
+
+ 
+ 

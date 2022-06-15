@@ -196,14 +196,33 @@
     <div class="filters">
       <div class="filters__selects">
         <div class="filters__selects__title">Filters</div>
-        <button id="select" class="filters__selects__dropdown">by brend</button>
-        <ul class="filters__selects__list">
-          <li class="filters__selects__list__item" data-value="Ferrer">Ferrer</li>
-          <li class="filters__selects__list__item" data-value="2">2</li>
-          <li class="filters__selects__list__item" data-value="3">3</li>
-          <li class="filters__selects__list__item" data-value="4">4</li>
-        </ul>
-        <span>Result</span>
+        <div class="filters__selects__left-filter">
+            <div class="wrapper-select">
+              <button
+                class="filters__selects__left-filter__dropdown filters__selects__left-filter__dropdown--brend">by
+                brend</button>
+              <ul class="filters__selects__left-filter__list">
+                <li class="filters__selects__left-filter__list__item" data-value="Ferrer">
+                  Ferrer</li>
+                <li class="filters__selects__left-filter__list__item" data-value="2">2</li>
+                <li class="filters__selects__left-filter__list__item" data-value="3">3</li>
+                <li class="filters__selects__left-filter__list__item" data-value="4">4</li>
+              </ul>
+            </div>
+            <div class="wrapper-select">
+              <button
+                class="filters__selects__left-filter__dropdown filters__selects__left-filter__dropdown--type">by
+                type</button>
+              <ul class="filters__selects__left-filter__list">
+                <li class="filters__selects__left-filter__list__item" data-value="Ferrer">
+                  Biscuits</li>
+                <li class="filters__selects__left-filter__list__item" data-value="2">22</li>
+                <li class="filters__selects__left-filter__list__item" data-value="3">33</li>
+                <li class="filters__selects__left-filter__list__item" data-value="4">44</li>
+              </ul>
+            </div>
+        </div>
+     
         <div class="wrapper-filter-result"></div>
         <!--<form class="filters__selects__left">
           <select  multiple>
@@ -214,10 +233,7 @@
             <option>4</option>
             <option value="Ferrero">Ferrero</option>
           </select>
-          
-          
-        </form>
-        <input type="text">-->
+        </form>-->
         
         <section class="product-cards">
           <div class="product-cards__product-card product-card" data-id="01">
