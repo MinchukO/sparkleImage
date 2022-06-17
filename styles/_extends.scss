@@ -13,7 +13,10 @@
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 24px;
+  line-height: 41px;
   color: $color-text;
+  letter-spacing: -1px;
+  max-width: 844px;
 }
 
 %circle-button {
@@ -60,4 +63,33 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+%select {
+   position: relative;
+    display: block;
+    padding: 18px;
+    margin-bottom: 68px;
+    text-transform: uppercase;
+    border: 1px solid #D4D4D4;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 18px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        width: 16px;
+        height: 10px;
+          //border-width: 10.4px 6px 0 6px;
+          //border-color:#fff transparent transparent transparent;
+          //border-style: solid;
+        pointer-events: none;
+        }
 }

@@ -1,38 +1,39 @@
 .mobile-menu {
-  padding-top: 62px;
-  height: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   transform: translateX(-100%);
-  transition: transform 0.3s;
-  overflow: auto;
+  transition: fransform 0.3s;
+  overflow-y: auto;
   background-color: $background-body;
-
-  @media (max-width:900px) {
+  padding-top: 51px;
+  @media (max-width: 700px) {
+    padding-top: 40px;
+  }
+   @media (max-width: 515px) {
     padding-top: 32px;
+  }
+  @media (max-width: 450px) {
+    padding-top: 15px;
   }
 
   &:target {
     transform: translateX(0);
+    transition: fransform 0.3s;
   }
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-
-    &__cross {
-      display: block;
-      @extend %mobile-icons;
-      background-image: url(../../images/icons/Icon-Close.svg);
-    }
-  }
+  &--cross {
+    @extend %mobile-icons;
+    display: block;
+    background-image: url(./../images/icons/Icon-Close.svg);
+    position: relative;
+    z-index: 2;
+  } 
   &__list {
     margin-bottom: 30px;
+    padding-top: 65px;
     &>li:hover {
         .mobile-menu__sub-list {
           display: block;
