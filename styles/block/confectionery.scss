@@ -7,15 +7,18 @@
     @extend %sub-title;
   }
 }
+
 .columns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @media (max-width: 990px) {
-      flex-direction: column;
-      align-items: flex-start;
+      display: block;
+      //width: 100%;
       //margin: 0 auto;
     }
+  }
 }
 
 .filters {
@@ -32,36 +35,37 @@
       display: flex;
       margin-right: 39px;
       gap: 0 39px;
-      @media (max-width: 442px) {
+      @media (max-width: 560px) {
       flex-direction: column;
-      margin: 0 auto;
+      margin-right: 0;
       }
+
       &__dropdown{
         @extend %select;
+        text-transform: uppercase;
+        width: 200px;
+        height: 65px;
+        color: #fff;
+        @include font('Inter', '600', '22px');
         &::after {
            background-image: url('./../images/icons/arrow.svg');
         }
-        @media (max-width: 500px) {
-          width: 180px;
-          height: 65px;
-        }
-        @media (max-width: 442px) {
+        //@media (max-width: 500px) {
+        //  width: 180px;
+        //  height: 65px;
+        //}
+        @media (max-width: 560px) {
+        margin-bottom: 40px;
+      }
+        @media (max-width: 445px) {
         width: 100%;
         margin-bottom: 30px;
       }
         &--brend {
           background-color: #571463;
-          width: 200px;
-          height: 65px;
-          color: #fff;
-          @include font('Inter', '600', '22px');
         }
         &--type {
           background-color: #008DAB;
-          width: 200px;
-          height: 65px;
-          color: #fff;
-          @include font('Inter', '600', '22px');
         }
       //&:focus {
       //  outline: none;
@@ -69,6 +73,62 @@
       //}
   
     }
+      &__list { 
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        width: 200px;
+        background-color: #F5F5F5;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(176, 198, 225, 0.6);
+        border-radius: 6px;
+        z-index: 1;
+          &--visible {
+            display: block;
+          }
+          @media (max-width: 442px) {
+            width: 100%;
+          } 
+          &__item {
+            border: 1px solid gray;
+            border-bottom: none;
+            padding: 13px 20px;
+            cursor: pointer;
+            &:first-child {
+            border-radius: 6px 6px 0 0;
+            }
+            &:last-child {
+              border-radius: 0 0 6px 6px;
+              border-bottom: 1px solid gray;
+            }
+            &:hover {
+              background-color: lavender;
+            }
+          }
+      }
+    }
+    &__right-filter {
+      &__dropdown {
+        @extend %select;
+        text-transform: capitalize;
+        width: 399px;
+        height: 76px;
+        color: #939393;
+        @include font('Inter', '400', '22px');
+
+        &::after {
+           background-image: url('./../images/icons/arrow-gray.svg');
+        }
+        @media (max-width: 560px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+        &--sort {
+          background-color: #FFFFFF;
+          box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.06);
+        }
+      }
       &__list {
         display: none;
         position: absolute;
@@ -80,18 +140,18 @@
         box-shadow: 0px 4px 8px rgba(176, 198, 225, 0.6);
         border-radius: 6px;
         z-index: 1;
-           @media (max-width: 442px) {
+          &--visible {
+            display: block;
+          }
+          @media (max-width: 442px) {
             width: 100%;
-        }
-        &--visible {
-          display: block;
-        }
-        &__item {
-          border: 1px solid gray;
-          border-bottom: none;
-          padding: 13px 20px;
-          cursor: pointer;
-          &:first-child {
+          }
+          &__item {
+            border: 1px solid gray;
+            border-bottom: none;
+            padding: 13px 20px;
+            cursor: pointer;
+            &:first-child {
             border-radius: 6px 6px 0 0;
           }
           &:last-child {
@@ -102,25 +162,6 @@
             background-color: lavender;
           }
         }
-      }
-    }
-    &__right-filter {
-      &__dropdown {
-        @extend %select;
-        &::after {
-           background-image: url('./../images/icons/arrow-gray.svg');
-        }
-        &--sort {
-          background-color: #FFFFFF;
-          box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.06);
-          width: 399px;
-          height: 76px;
-          color: #939393;
-          @include font('Inter', '400', '22px');
-        }
-      }
-      &__list {
-
       }
     }
   }

@@ -95,7 +95,6 @@ body {
   display: block;
   padding: 18px;
   margin-bottom: 68px;
-  text-transform: uppercase;
   border: 1px solid #D4D4D4;
   border-radius: 10px;
   text-align: left;
@@ -456,7 +455,7 @@ body {
 }
 .mobile-menu__list {
   margin-bottom: 30px;
-  padding-top: 65px;
+  padding-top: 35px;
 }
 .mobile-menu__list > li:hover .mobile-menu__sub-list {
   display: block;
@@ -510,15 +509,14 @@ body {
 .wrapper {
   margin-bottom: 79px;
 }
-.columns {
+.columns__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 990px) {
-  .columns {
-    flex-direction: column;
-    align-items: flex-start;
+  .columns__content {
+    display: block;
   }
 }
 
@@ -539,22 +537,30 @@ body {
   margin-right: 39px;
   gap: 0 39px;
 }
-@media (max-width: 442px) {
+@media (max-width: 560px) {
   .filters__selects__left-filter {
     flex-direction: column;
-    margin: 0 auto;
+    margin-right: 0;
   }
+}
+.filters__selects__left-filter__dropdown {
+  text-transform: uppercase;
+  width: 200px;
+  height: 65px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
 }
 .filters__selects__left-filter__dropdown::after {
   background-image: url("./../images/icons/arrow.svg");
 }
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   .filters__selects__left-filter__dropdown {
-    width: 180px;
-    height: 65px;
+    margin-bottom: 40px;
   }
 }
-@media (max-width: 442px) {
+@media (max-width: 445px) {
   .filters__selects__left-filter__dropdown {
     width: 100%;
     margin-bottom: 30px;
@@ -562,21 +568,9 @@ body {
 }
 .filters__selects__left-filter__dropdown--brend {
   background-color: #571463;
-  width: 200px;
-  height: 65px;
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  font-size: 22px;
 }
 .filters__selects__left-filter__dropdown--type {
   background-color: #008DAB;
-  width: 200px;
-  height: 65px;
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  font-size: 22px;
 }
 .filters__selects__left-filter__list {
   display: none;
@@ -590,13 +584,13 @@ body {
   border-radius: 6px;
   z-index: 1;
 }
+.filters__selects__left-filter__list--visible {
+  display: block;
+}
 @media (max-width: 442px) {
   .filters__selects__left-filter__list {
     width: 100%;
   }
-}
-.filters__selects__left-filter__list--visible {
-  display: block;
 }
 .filters__selects__left-filter__list__item {
   border: 1px solid gray;
@@ -614,12 +608,8 @@ body {
 .filters__selects__left-filter__list__item:hover {
   background-color: lavender;
 }
-.filters__selects__right-filter__dropdown::after {
-  background-image: url("./../images/icons/arrow-gray.svg");
-}
-.filters__selects__right-filter__dropdown--sort {
-  background-color: #FFFFFF;
-  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.06);
+.filters__selects__right-filter__dropdown {
+  text-transform: capitalize;
   width: 399px;
   height: 76px;
   color: #939393;
@@ -627,6 +617,56 @@ body {
   font-weight: 400;
   font-size: 22px;
 }
+.filters__selects__right-filter__dropdown::after {
+  background-image: url("./../images/icons/arrow-gray.svg");
+}
+@media (max-width: 560px) {
+  .filters__selects__right-filter__dropdown {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.filters__selects__right-filter__dropdown--sort {
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.06);
+}
+.filters__selects__right-filter__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 200px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(176, 198, 225, 0.6);
+  border-radius: 6px;
+  z-index: 1;
+}
+.filters__selects__right-filter__list--visible {
+  display: block;
+}
+@media (max-width: 442px) {
+  .filters__selects__right-filter__list {
+    width: 100%;
+  }
+}
+.filters__selects__right-filter__list__item {
+  border: 1px solid gray;
+  border-bottom: none;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.filters__selects__right-filter__list__item:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.filters__selects__right-filter__list__item:last-child {
+  border-radius: 0 0 6px 6px;
+  border-bottom: 1px solid gray;
+}
+.filters__selects__right-filter__list__item:hover {
+  background-color: lavender;
+}
+
 .wrapper-select {
   position: relative;
 }

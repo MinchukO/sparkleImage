@@ -17,8 +17,9 @@
 document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
   
   const button = itemWrappper.querySelector(
-    ".filters__selects__left-filter__dropdown"
+    ".select-btn"
   );
+ 
   const dropdown = itemWrappper.querySelector(
     ".filters__selects__left-filter__list"
   );
