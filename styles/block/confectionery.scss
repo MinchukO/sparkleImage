@@ -209,6 +209,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   gap: 101px 81px;
+  margin-bottom: 101px;
   @media (max-width:900px) {
     gap: 50px 60px;
   }
@@ -302,4 +303,41 @@
           }
         }
     }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 17px;
+  margin-bottom: 75px;
+  &__item {
+    @include font('Inter', '700', '18px');
+    color: #A4A0A0;
+    line-height: 130.52%;
+    width: 29px;
+    height: 33px;
+    cursor: pointer;
+    //appearance: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    &:hover {
+      background-color: #F5F4F4;
+    }
+    &--active {
+      background-color: #F5F4F4;
+     
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #571463;
+      }
+    }
+  }
 }
