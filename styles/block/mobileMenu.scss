@@ -24,13 +24,19 @@
     transform: translateX(0);
     transition: fransform 0.3s;
   }
-  &--cross {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     &--cross {
     @extend %mobile-icons;
     display: block;
     background-image: url(./../images/icons/Icon-Close.svg);
     position: relative;
     z-index: 2;
   } 
+  }
+ 
   &__list {
     margin-bottom: 30px;
     padding-top: 35px;
