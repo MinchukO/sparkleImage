@@ -21,10 +21,10 @@ function showList(items, wrapper, items_on_page, page_number) {
 
   products_on_one_page.map((product, i) => {
    const productsHtml = `
-    <div class="product-cards__product-card product-card" data-id="${product.id}">
+    <div class="product-cards__product-card product-card" data-id="${product.id}" data-index="${product.index}">
       <img src="${product.img}" alt="" class="product-cards__product-card__img">
         <h3 class="product-cards__product-card__title">
-          ${product.title}
+          <a href="/sparkleImage/details.html">${product.title}</a>
             </h3>
         <div class="product-cards__product-card__count">
           <div class="product-cards__product-card__count__items-control" data-action="minus">-</div>
@@ -50,7 +50,7 @@ function showList(items, wrapper, items_on_page, page_number) {
           </div>
         </div>
           </div>
-  `
+  `;
     wrapperProduct.insertAdjacentHTML('beforeend', productsHtml)
   })
 }
@@ -107,15 +107,16 @@ function paginationButton(page, items) {
   
   li.addEventListener('click', () => {
     current_page = page;
-    if (current_page !== 1) {
-      let li = document.createElement('li')
 
-      li.innerHTML = `
-      <li class=" data-atr pagination__item pagination__item--arrowL"></li>
-      `
-      pagination.prepend(li)
-    } else {
+    if (current_page !== 1 && !pagination.hasAttribute('data-arrow')) {
+      pagination.setAttribute('data-arrow', 'L')
+      pagination.insertAdjacentHTML('afterbegin', `
+        <li class="pagination__item pagination__item--arrowL"></li>
+      `)
+    } 
+    if (current_page === 1) {
       let arrowL = document.querySelector('.pagination__item--arrowL')
+      pagination.removeAttribute('data-arrow')
       arrowL.remove()
     }
     
@@ -178,10 +179,15 @@ document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
   );
 
   list.forEach((item) => {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (e) {
 
-      filter(this.innerText)
-
+      const arrt = e.target.getAttribute('data-value')
+      console.log(arrt)
+      console.log(this.innerText)
+      //filter(this.innerText)
+      //if (e.target.hasAttribute(arrt === this.innerText)) {
+      //  return;
+      //}
       filterChoice.insertAdjacentHTML(
         "beforeend",
         `
@@ -193,7 +199,6 @@ document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
       );
       dropdown.classList.remove("filters__selects__left-filter__list--visible");
 
-
       document.querySelector(".wrapper-filter-result").addEventListener('click', (e) => {
         if (!e.target.matches(".wrapper-filter-result__item__cross")) {
           return;
@@ -203,12 +208,11 @@ document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
     });
   });
 
-  function filter(current_category) {
-    const result = products.filter(item => item.brand === current_category || item.type === current_category)
-    showList(result, wrapperProduct, items_on_page, current_page)
-    setUpPagination(result, pagination, items_on_page)
-
-  }
+  //function filter(current_category) {
+  //  const result = products.filter(item => item.brand === current_category || item.type === current_category)
+  //  showList(result, wrapperProduct, items_on_page, current_page)
+  //  setUpPagination(result, pagination, items_on_page)
+  //}
 
 });
 

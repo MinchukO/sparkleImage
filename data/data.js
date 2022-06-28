@@ -6,6 +6,7 @@ const products = [
   oldPrice: 1.90,
   brand: 'Ferrer',
   type: 'Biscuits',
+  index: 5202217006904,
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ const products = [
     oldPrice: 1.90,
     brand: 'CADBURY FINGERS',
     type: 'CHOCLATE',
+    index: 5202217006904,
   },
    {
     id: 3,
@@ -24,6 +26,7 @@ const products = [
     oldPrice: 1.90,
     brand: 'NATURE VALLEY',
     type: 'oats',
+    index: 5202217006904,
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const products = [
     oldPrice: 1.90,
     brand: 'Ferrer',
     type: 'biscuits',
+    index: 5202217006904,
   },
   {
     id: 5,
