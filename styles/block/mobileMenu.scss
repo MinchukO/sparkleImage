@@ -29,12 +29,15 @@
     justify-content: space-between;
     align-items: center;
      &--cross {
-    @extend %mobile-icons;
-    display: block;
-    background-image: url(./../images/icons/Icon-Close.svg);
-    position: relative;
-    z-index: 2;
-  } 
+      @extend %mobile-icons;
+      display: block;
+      background-image: url(./../images/icons/Icon-Close.svg);
+      position: relative;
+      z-index: 2;
+    } 
+    &__logo {
+      max-width: 200px;
+    }
   }
  
   &__list {

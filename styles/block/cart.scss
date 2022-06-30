@@ -207,6 +207,7 @@
   margin-right: 33px;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
   @media (max-width: 845px) {
      width: 200px;
      @include font ('Inter', '600', '18px');
