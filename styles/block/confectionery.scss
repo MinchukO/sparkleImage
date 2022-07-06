@@ -213,19 +213,40 @@
   @media (max-width:900px) {
     gap: 50px 60px;
   }
+  @media (max-width: 400px) {
+    gap: 0;
+  }
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 174px);
+   }
     &__product-card {
       max-width: 388px;
       padding: 29px 14px 14px;
       border: 3px solid #EDEDED;
       box-shadow: 2px 2px 21px 2px rgba(0, 0, 0, 0.05);
       border-radius: 10px;
-      background-color: #F5F5F5;
-
+        @media (max-width: 672px) {
+          width: 250px;
+        }
+        @media (max-width: 400px) {
+          width: 174px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
         &__img {
           display: block;
           height: 262px;
           margin: 0 auto 26px;
           transition-duration: 400ms;
+          @media (max-width: 720px) {
+            height: 151px;
+          }
+          @media (max-width: 400px) {
+            height: 117px;
+            margin: 0 auto 6px;
+          }
           &:hover {
             transform: scale(1.1);
             outline: 3px solid #f3f3f3;
@@ -239,6 +260,11 @@
           letter-spacing: -1px;
           line-height: 36px;
           margin-bottom: 27px;
+          @media (max-width: 400px) {
+            @include font('Inter', '700', '16px');
+            line-height: 24px;
+            margin: 0;
+          }
         }
 
         &__count {
@@ -247,6 +273,9 @@
           display: flex;
           color: #3A3E50;
           line-height: 32px;
+           @media (max-width: 400px) {
+             @include font('Inter', '700', '14px');
+           }
           
             &__items-control {
               @extend %counter;
@@ -260,14 +289,25 @@
           display: flex;
           justify-content: space-between;
           margin-bottom: 26px;
+          @media (max-width: 400px) {
+            flex-direction: column;
+          }
           &__price {
           position: relative;
+          @media (max-width: 400px) {
+            margin-bottom: 20px;
+          }
             &__label {
               @include font('Inter', '700', '34px');
               letter-spacing: -1px;
               color: #571463;
               line-height: 130.52%;
+              @media (max-width: 400px) {
+                @include font('Inter', '700', '22px');
+                line-height: 70.52%;
+              }
             }
+          
             &__value {
               position: absolute;
               top: 0;
@@ -275,11 +315,19 @@
               @include font('Inter', '700', '20px');
               text-decoration: line-through;
               color: #D4D4D4;
+              @media (max-width: 400px) {
+                top: -2px;
+                right: 0;
+                 @include font('Inter', '700', '16px');
+              }
             }
           }
           &__buttons {
             display: flex;
             gap: 7px;
+            @media(max-width: 400px) {
+              justify-content: space-between;
+            }
             &__link {
               @extend %button;
               height: 50px;
@@ -289,7 +337,10 @@
               transition: color 0.4s, background-color 0.4s;
               border: none;
               cursor: pointer;
-
+              @media (max-width: 400px) {
+                height: 40px;
+                width: 40px;
+              }
               &--heart {
                 background-image: url(./../images/icons/heart.svg);
               }

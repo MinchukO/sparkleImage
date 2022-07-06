@@ -31,14 +31,12 @@
   padding-top: 62px;
   background-color: $background-body;
   transition: padding-bottom 0.5s ease-in 0s;
-  @media (max-width: 1280px) {
-    padding: 32px 0 10px;
-  }
   @media (max-width: 450px) {
-    padding: 15px 0 10px;
+    padding: 15px 0 20px;
   }
   @media (max-width: 1280px) {
     top: 0;
+    padding: 32px 0 20px;
   }
 
   &__top {
@@ -204,9 +202,6 @@
         padding: 20px 0;
         transition: font-weight .3s;
 
-        &:hover {
-          text-shadow: 1px 1px;
-        }
         &::after {
           content: '';
           display: block;

@@ -184,10 +184,10 @@ document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
       const arrt = e.target.getAttribute('data-value')
       console.log(arrt)
       console.log(this.innerText)
-      //filter(this.innerText)
-      //if (e.target.hasAttribute(arrt === this.innerText)) {
-      //  return;
-      //}
+      filter(this.innerText)
+      if (e.target.hasAttribute(arrt === this.innerText)) {
+        return;
+      }
       filterChoice.insertAdjacentHTML(
         "beforeend",
         `
@@ -204,15 +204,16 @@ document.querySelectorAll(".wrapper-select").forEach((itemWrappper) => {
           return;
         }
         e.target.closest(".wrapper-filter-result__item").remove()
+        showList(products, wrapperProduct, items_on_page, current_page);
       })
     });
   });
 
-  //function filter(current_category) {
-  //  const result = products.filter(item => item.brand === current_category || item.type === current_category)
-  //  showList(result, wrapperProduct, items_on_page, current_page)
-  //  setUpPagination(result, pagination, items_on_page)
-  //}
+  function filter(current_category) {
+    const result = products.filter(item => item.brand === current_category || item.type === current_category)
+    showList(result, wrapperProduct, items_on_page, current_page)
+    setUpPagination(result, pagination, items_on_page)
+  }
 
 });
 

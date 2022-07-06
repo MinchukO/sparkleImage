@@ -1,7 +1,7 @@
 const products = [
   {id: 1,
   img: 'images/Rectangle 19 (1).png',
-  title: 'REESES PEANUT BUTTER MINIS 150G 1',
+  title: 'REESES PEANUT BUTTER MINIS 150G',
   price: 1.65,
   oldPrice: 1.90,
   brand: 'Ferrer',
@@ -31,7 +31,7 @@ const products = [
   {
     id: 4,
     img: 'images/Rectangle 19 (1).png',
-    title: 'REESES PEANUT BUTTER MINIS 150G 4',
+    title: 'REESES PEANUT BUTTER MINIS 150G',
     price: 1.65,
     oldPrice: 1.90,
     brand: 'Ferrer',
@@ -59,7 +59,7 @@ const products = [
   {
     id: 7,
     img: 'images/Rectangle 19 (1).png',
-    title: 'REESES PEANUT BUTTER MINIS 150G 7',
+    title: 'REESES PEANUT BUTTER MINIS 150G',
     price: 3.65,
     oldPrice: 1.90,
     brand: 'Ferrer',
@@ -86,7 +86,7 @@ const products = [
   {
     id: 10,
     img: 'images/Rectangle 19.png',
-    title: 'NATURE VALLEY CRUCNHY OATS 10',
+    title: 'NATURE VALLEY CRUCNHY OATS 1',
     price: 8.65,
     oldPrice: 1.90,
     brand: 'NATURE VALLEY',

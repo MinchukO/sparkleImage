@@ -1,0 +1,192 @@
+.banner-offer {
+  &__titile {
+    margin-bottom: 11px;
+    @include font('Inter', '700', '48px');
+    line-height: 58px;
+    color: #3A3E50;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  &__subtitle {
+    margin-bottom: 77px;
+    @include font('Inter', '500', '25px');
+    line-height: 30px;
+    color: #686868;
+    letter-spacing: 1px;
+    text-align: center;
+    a {
+      color: #A563AE;
+    }
+  }
+
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 46px;
+  border: 1px solid #D4D4D4;
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    padding: 116px 32px 114px 33px;
+    background-color: #571463;
+    @media (max-width: 800px) {
+      padding: 40px 20px;
+    }
+    &__title {
+    margin-bottom: 15px;
+    @include font('Bebas Neue', '400', '70px');
+    line-height: 91px;
+    color: #ffffff;
+    @media (max-width: 800px) {
+       @include font('Bebas Neue', '400', '50px');
+       line-height: 41px;
+    }
+  }
+    &__subtitle {
+      margin-bottom: 10px;
+      @include font('Inter', '500', '34px');
+      letter-spacing: -2px;
+      color: #ffffff;
+         @media (max-width: 800px) {
+       @include font('Inter', '400', '28px');
+       letter-spacing: 0px;
+    }
+    }
+    &__text {
+      margin-bottom: 37px;
+      @include font('Inter', '300', '28px');
+      letter-spacing: -2px;
+      color: #ffffff;
+      @media (max-width: 800px) {
+       @include font('Inter', '400', '22px');
+       letter-spacing: 0px;
+    }
+    }
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 244px;
+      height: 55px;
+      padding: 0 32px 0 21px;
+      background-color: #A470AB;
+      border-radius: 30px;
+      @include font('Inter', '600', '22px');
+      line-height: 48px;
+      color: #571463;
+      cursor: pointer;
+      @media (max-width: 800px) {
+        width: 200px;
+        height: 50px;
+        padding: 0 20px 0 11px;
+      }
+      &::after {
+        content: '';
+        background-image: url('./../images/icons/arrow__btn.svg');
+        display: block;
+        width: 10px;
+        height: 16px;
+      }
+    }
+  }
+
+	&__right-side {
+    &__img {
+      object-fit: fill;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.offer {
+  text-align: center;
+  &__subtitle {
+    @include font('Inter', '600', '32px');
+    line-height: 32px;
+    color: #3A3E50;
+     @media (max-width: 800px) {
+      @include font('Inter', '600', '24px');
+    }
+  }
+
+	&__title {
+    @extend %h2;
+    margin: 0 0 43px;
+    color: #9D48A9;
+    text-align: center;
+    @media (max-width: 800px) {
+      @include font('Inter', '600', '32px');
+    }
+  }
+
+	&__products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 105px;
+    @media (max-width: 800px) {
+      margin-bottom: 55px;
+    }
+    &__product {
+      margin-right: 109px;
+      @media (max-width: 800px) {
+        margin-right: 50px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &__img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+      }
+    }
+  }
+}
+
+.banner-welcome {
+  
+  &__left {
+    background-color: #A563AE;
+    border-radius: 15px;
+    padding: 60px 12px 57px 26px;
+    position: relative;
+     @media (max-width: 600px) {
+       padding: 30px 12px 27px 16px;
+     }
+    &__subtitle {
+    @include font('Inter', '500', '24px');
+    color: #FFFFFF;
+    line-height: 36px;
+       @media (max-width: 600px) {
+        @include font('Inter', '600', '18px');
+      }
+    }
+
+    &__title {
+      width: 57%;
+      @include font('Inter', '600', '30px');
+      color: #FFFFFF;
+      line-height: 40px;
+      letter-spacing: -1px;
+      @media (max-width: 600px) {
+        @include font('Inter', '600', '24px');
+      }
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+      object-fit: cover;
+      @media(max-width: 1170px) {
+        object-fit: contain;
+      }
+    }
+  }
+}
