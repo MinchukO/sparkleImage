@@ -20,7 +20,7 @@
 <body>
   <section class="banner-offer">
     <div class="container">
-      <div class="banner-offer__titile">Good Morning</div>
+      <div class="banner-offer__title">Good Morning</div>
       <div class="banner-offer__subtitle"><a href="">Sign in</a> for the best experience. Not a
           customer yet? <a href="">Register</a></div>
       <div class="banner">
@@ -89,14 +89,123 @@
       <div class="best-sellers__subtitle">dont miss out</div>
     </div>
   </section>
-  <section class="product-cards"></section>
-  <script src="data/data.js" type="module"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/products.js" type="module"></script>
-  <script src="scripts/filter.js" type="module"></script>
-  <script src="scripts/sort.js" type="module"></script>
-  <script src="scripts/counter.js"></script>
-  <script src="scripts/cart.js"></script>
-  <script src="scripts/search.js"></script>
+  <div class="container">
+<section class="product-cards">
+  <div class="product-cards__product-card product-card" data-id="${product.id}"
+    data-index="${product.index}">
+    <img src="./images/pan.png" alt="" class="product-cards__product-card__img">
+    <h3 class="product-cards__product-card__title">
+      <a href="/sparkleImage/details.html">TEFAL COOKING PAN NON STICK</a>
+    </h3>
+    <div class="product-cards__product-card__count">
+      <div class="product-cards__product-card__count__items-control"
+        data-action="minus">-</div>
+      <div class="product-cards__product-card__count__items-current"
+        data-counter>
+        1</div>
+      <div class="product-cards__product-card__count__items-control"
+        data-action="plus">+</div>
+    </div>
+    <div class="product-cards__product-card__bottom">
+      <div class="product-cards__product-card__bottom__price">
+        <p class="product-cards__product-card__bottom__price__label">
+          &#8364;80.00</p>
+        <p class="product-cards__product-card__bottom__price__value">
+          &#8364;90.00</p>
+      </div>
+      <div class="product-cards__product-card__bottom__buttons">
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+          href="#" data-qa="heart">
+        </button>
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+          href="#" data-cart>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="product-cards__product-card product-card" data-id="${product.id}"
+    data-index="${product.index}">
+    <img src="./images/tea.png" alt="" class="product-cards__product-card__img">
+    <h3 class="product-cards__product-card__title">
+      <a href="/sparkleImage/details.html">TETLEY ORIGINAL 120 TEA BAGS</a>
+    </h3>
+    <div class="product-cards__product-card__count">
+      <div class="product-cards__product-card__count__items-control"
+        data-action="minus">-</div>
+      <div class="product-cards__product-card__count__items-current"
+        data-counter>
+        1</div>
+      <div class="product-cards__product-card__count__items-control"
+        data-action="plus">+</div>
+    </div>
+    <div class="product-cards__product-card__bottom">
+      <div class="product-cards__product-card__bottom__price">
+        <p class="product-cards__product-card__bottom__price__label">
+          &#8364;4.65</p>
+        <p class="product-cards__product-card__bottom__price__value">
+          &#8364;5.90</p>
+      </div>
+      <div class="product-cards__product-card__bottom__buttons">
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+          href="#" data-qa="heart">
+        </button>
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+          href="#" data-cart>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="product-cards__product-card product-card" data-id="${product.id}"
+    data-index="${product.index}">
+    <img src="./images/toothpaste.png" alt=""
+      class="product-cards__product-card__img">
+    <h3 class="product-cards__product-card__title">
+      <a href="/sparkleImage/details.html">TETLEY ORIGINAL 120 TEA BAGS</a>
+    </h3>
+    <div class="product-cards__product-card__count">
+      <div class="product-cards__product-card__count__items-control"
+        data-action="minus">-</div>
+      <div class="product-cards__product-card__count__items-current"
+        data-counter>
+        1</div>
+      <div class="product-cards__product-card__count__items-control"
+        data-action="plus">+</div>
+    </div>
+    <div class="product-cards__product-card__bottom">
+      <div class="product-cards__product-card__bottom__price">
+        <p class="product-cards__product-card__bottom__price__label">
+          &#8364;4.65</p>
+        <p class="product-cards__product-card__bottom__price__value">
+          &#8364;5.90</p>
+      </div>
+      <div class="product-cards__product-card__bottom__buttons">
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+          href="#" data-qa="heart">
+        </button>
+        <button type="button"
+          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+          href="#" data-cart>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+<section class="banner-categories">
+  <div class="container">
+    <h2 class="banner-categories__title">Shop by <span>Categories</span></h2>
+    <div class="banner-categories__images">
+      <a href="#" class="banner-categories__images__link banner-categories__images__link--clean">CLEANING PRODUCTS</a>
+      <a href="#" class="banner-categories__images__link banner-categories__images__link--drink">DRINKS</a>
+      <a href="#" class="banner-categories__images__link banner-categories__images__link--household">HOUSEHOLD GOODS</a>
+      <a href="#" class="banner-categories__images__link banner-categories__images__link--health">HEALTH & BEAUTY</a>
+    </div>
+  </div>
+</section>
 </body>
 </html>

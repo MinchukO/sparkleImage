@@ -1,8 +1,9 @@
 .banner-offer {
-  //&__titile {
-  //  margin-bottom: 11px;
-  //  @extend %main-title;
-  //}
+  &__title {
+    margin-bottom: 11px;
+    @extend %h2;
+    text-align: center;
+  }
   &__subtitle {
     margin-bottom: 77px;
     @include font('Inter', '500', '25px');
@@ -226,6 +227,9 @@
   text-align: center;
   padding: 55px 0 54px;
   margin-bottom: 106px;
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+  }
 	&__title {
     color: #FFFFFF;
     text-align: center;
@@ -238,4 +242,84 @@
   }
 }
 
+.banner-categories {
+  &__title {
+    text-align: center;
+    margin-bottom: 77px;
+     @media(max-width: 800px) {
+        margin-bottom: 40px;
+        margin-top: 0;
+      }
+    span {
+      color: #9D48A9;
+    }
+  }
 
+	&__images {
+    border-bottom: 3px solid #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0 0 38px;
+    
+    &__link {
+      @include font('Inter', '700', '25px');
+      margin-bottom: 106px;
+      color: #3A3E50;
+      text-align: center;
+       @media(max-width: 630px) {
+        @include font('Inter', '700', '20px');
+      }
+      @media(max-width: 400px) {
+        @include font('Inter', '700', '13px');
+      }
+      &--clean{
+        &::before {
+          background-image: url('./../images/icons/clean.svg');
+        }
+      }
+      &--drink{
+        &::before {
+          background-image: url('./../images/icons/drink.svg');
+        }
+      }
+      &--household{
+        &::before {
+          background-image: url('./../images/icons/household.svg');
+        }
+      }
+      &--health{
+        &::before {
+          background-image: url('./../images/icons/health.svg');
+        }
+      }
+      &::before {
+        content: '';
+        display: block;
+        margin-bottom: 21px;
+        width: 213px;
+        height: 213px;
+        border-radius: 50%;
+        background-color: #008DAB;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        @media(max-width: 1080px) {
+          width: 150px;
+          height: 150px;
+        }
+        @media(max-width: 860px) {
+           width: 80px;
+          height: 80px;
+        }
+        @media(max-width: 630px) {
+           width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

@@ -213,12 +213,17 @@
   @media (max-width:900px) {
     gap: 50px 60px;
   }
-  @media (max-width: 400px) {
-    gap: 0;
-  }
+ 
   @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @media (max-width: 500px) {
     grid-template-columns: repeat(2, 174px);
    }
+    @media (max-width: 500px) {
+    gap: 0;
+    margin-bottom: 101px;
+  }
     &__product-card {
       max-width: 388px;
       padding: 29px 14px 14px;
@@ -228,7 +233,7 @@
         @media (max-width: 672px) {
           width: 250px;
         }
-        @media (max-width: 400px) {
+        @media (max-width: 500px) {
           width: 174px;
           display: flex;
           flex-direction: column;
@@ -260,6 +265,9 @@
           letter-spacing: -1px;
           line-height: 36px;
           margin-bottom: 27px;
+          a {
+            color: #3A3E50;
+          }
           @media (max-width: 400px) {
             @include font('Inter', '700', '16px');
             line-height: 24px;
@@ -311,7 +319,7 @@
             &__value {
               position: absolute;
               top: 0;
-              right: -50px;
+              right: -75px;
               @include font('Inter', '700', '20px');
               text-decoration: line-through;
               color: #D4D4D4;
