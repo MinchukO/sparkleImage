@@ -1,12 +1,8 @@
 .banner-offer {
-  &__titile {
-    margin-bottom: 11px;
-    @include font('Inter', '700', '48px');
-    line-height: 58px;
-    color: #3A3E50;
-    letter-spacing: 2px;
-    text-align: center;
-  }
+  //&__titile {
+  //  margin-bottom: 11px;
+  //  @extend %main-title;
+  //}
   &__subtitle {
     margin-bottom: 77px;
     @include font('Inter', '500', '25px');
@@ -190,3 +186,56 @@
     }
   }
 }
+
+.banner-brends {
+  &__title {
+    margin-bottom: 40px;
+    color: #3A3E50;
+    text-align: center;
+    span {
+      color: #9D48A9;
+    }
+  }
+
+	&__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 79px;
+    &__brend {
+      border: 1px solid green;
+      margin-right: 25px;
+      @media (max-width:450px) {
+        margin-right: 15px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+       &__img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+    }
+    }
+  }
+}
+
+.best-sellers {
+  background-color: #6E3579;
+  text-align: center;
+  padding: 55px 0 54px;
+  margin-bottom: 106px;
+	&__title {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+  }
+
+	&__subtitle {
+    @include font('Inter', '500', '35px');
+    color: #FFFFFF;
+  }
+}
+
+
