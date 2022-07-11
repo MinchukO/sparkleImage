@@ -1,9 +1,14 @@
 const btn = document.querySelector(".header__top__right-menu__tablets-search");
-const form = document.querySelector(".header__top__right-menu__search");
-const header = document.querySelector('.header')
+const modalOverlay = document.querySelector(".modal-overlay");
+const modal = document.querySelector('.modal')
 
 btn.addEventListener('click', (e) => {
-  e.preventDefault()
-  form.classList.toggle('visible')
-  header.classList.toggle('header-visible')
+  modalOverlay.classList.toggle('modal-overlay--visible')
+  modal.classList.add('modal--visible')
+})
+
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target == modalOverlay) {
+    modalOverlay.classList.remove('modal-overlay--visible')
+  }
 })

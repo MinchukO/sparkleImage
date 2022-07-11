@@ -267,30 +267,70 @@
       margin-bottom: 106px;
       color: #3A3E50;
       text-align: center;
-       @media(max-width: 630px) {
+      @media(max-width: 800px) {
         @include font('Inter', '700', '20px');
       }
-      @media(max-width: 400px) {
+      @media(max-width: 560px) {
         @include font('Inter', '700', '13px');
       }
       &--clean{
         &::before {
           background-image: url('./../images/icons/clean.svg');
         }
+        @media(max-width: 1080px) {
+          &::before {
+            background-image: url('./../images/icons/cleanTablet.svg');
+          }
+        }
+        @media(max-width: 500px) {
+          &::before {
+            background-image: url('./../images/icons/cleanMobile.svg');
+          }
+        }
       }
       &--drink{
         &::before {
           background-image: url('./../images/icons/drink.svg');
+        }
+        @media(max-width: 1080px) {
+          &::before {
+            background-image: url('./../images/icons/drinkTablet.svg');
+          }
+        }
+        @media(max-width: 500px) {
+          &::before {
+            background-image: url('./../images/icons/drinkMobile.svg');
+          }
         }
       }
       &--household{
         &::before {
           background-image: url('./../images/icons/household.svg');
         }
+        @media(max-width: 1080px) {
+          &::before {
+            background-image: url('./../images/icons/householdTablet.svg');
+          }
+        }
+         @media(max-width: 500px) {
+          &::before {
+            background-image: url('./../images/icons/householdMobile.svg');
+          }
+        }
       }
       &--health{
         &::before {
           background-image: url('./../images/icons/health.svg');
+        }
+        @media(max-width: 1080px) {
+          &::before {
+            background-image: url('./../images/icons/healthTablet.svg');
+          }
+        }
+         @media(max-width: 500px) {
+          &::before {
+            background-image: url('./../images/icons/healthMobile.svg');
+          }
         }
       }
       &::before {
@@ -303,7 +343,7 @@
         background-color: #008DAB;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        //background-size: contain;
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -312,14 +352,124 @@
           height: 150px;
         }
         @media(max-width: 860px) {
-           width: 80px;
+          width: 80px;
           height: 80px;
         }
-        @media(max-width: 630px) {
-           width: 50px;
-          height: 50px;
+        //@media(max-width: 630px) {
+        //  width: 60px;
+        //  height: 60px;
+        //}
+      }
+    }
+  }
+}
+
+.footer {
+  &__top {
+     display: grid;
+      grid-template-columns: 350px auto auto 200px;
+      margin-bottom: 69px;
+      @media (max-width: 1200px) {
+        grid-template-columns: 300px auto auto 70px;
+      }
+      @media (max-width: 960px) {
+        grid-template-columns: 240px auto auto 70px;
+      }
+      @media (max-width: 750px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 55px auto;
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 55px auto;
+        row-gap: 50px;
+      }
+    &__column {
+      &--1 {
+        align-self: center;
+        @media (max-width: 400px) {
+          justify-self: center;
         }
       }
+      &--2 {
+        @media (max-width: 750px) {
+          grid-column-start: 1;
+        }
+      }
+      &--2, &--3 {
+        justify-self: center;
+        @media (max-width: 750px) {
+          justify-self: left;
+        }
+      }
+      &--4 {
+        justify-self: right;
+        align-self: self-end;
+        @media (max-width: 750px) {
+          grid-column-start: 4;
+        }
+        @media (max-width: 500px) {
+          grid-column-start: 2;
+        }
+      }
+      &__logo{
+        width: 264px;
+        height: 55px;
+        gap: 150px;
+        @media (max-width: 960px) {
+          width: 200px;
+          height: auto;
+        }
+        @media (max-width: 750px) {
+          margin-bottom: 20px;
+        }
+      }
+      &__title{
+        @include font('Inter', '600', '24px');
+        color: #3A3E50;
+        line-height: 29px;
+        margin-bottom: 29px;
+        @media (max-width: 960px) {
+          @include font('Inter', '600', '22px');
+        }
+        @media (max-width: 800px) {
+          @include font('Inter', '600', '20px');
+          margin-bottom: 20px;
+        }
+      }
+      &__item{
+         margin-bottom: 18px;
+         @media (max-width: 800px) {
+             margin-bottom: 10px;
+           }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        &__link{
+          @include font('Inter', '400', '22px');
+          color: #3A3E50;
+          line-height: 27px;
+           @media (max-width: 960px) {
+             @include font('Inter', '400', '20px');
+           }
+           @media (max-width: 800px) {
+             @include font('Inter', '400', '18px');
+           }
+        }
+      }
+      &__facebook{
+        width: 40px;
+        height: 40px;
+        justify-self: right;
+      }
+    }
+  }
+	&__bottom {
+    text-align: center;
+    margin-bottom: 93px;
+    span {
+      @include font('Inter', '400', '17px');
+      color: #686868;
     }
   }
 }

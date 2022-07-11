@@ -22,15 +22,19 @@
         </a>
   
         <div class="header__top__right-menu">
-          <div class="search-wrapper">
+   
             <a class="header__top__right-menu__tablets-search" href="#search"></a>
-            <form class="header__top__right-menu__search" action="#" id="search">
-              <input class="header__top__right-menu__search__input"
-                placeholder="Search" type="search">
-              <button class="header__top__right-menu__search__button"
-                type="submit"></button>
-            </form>
-          </div>
+            <div class="modal-overlay">
+              <div class="modal">
+                <form class="header__top__right-menu__search" action="#" id="search">
+                  <input class="header__top__right-menu__search__input" placeholder="Search"
+                    type="text">
+                  <button class="header__top__right-menu__search__button"
+                    type="submit"></button>
+                </form>
+              </div>
+            </div>
+          
           <a class="header__top__right-menu__signIn" href="/"></a>
           <a class="header__top__right-menu__favorite" href="/"></a>
           <span class="header__top__right-menu__cart-wrapper">
@@ -267,7 +271,211 @@
             </div>
         </div>
         <div class="wrapper-filter-result"></div>
-        <section class="product-cards"></section>
+        <section class="product-cards">
+          <div class="product-cards__product-card product-card" data-id="${product.id}"
+            data-index="${product.index}">
+            <img src="./images/Rectangle 19 (1).png" alt="" class="product-cards__product-card__img">
+            <h3 class="product-cards__product-card__title">
+              <a href="/sparkleImage/details.html">REESES PEANUT BUTTER MINIS 150G</a>
+            </h3>
+            <div class="product-cards__product-card__count">
+              <div class="product-cards__product-card__count__items-control"
+                data-action="minus">-</div>
+              <div class="product-cards__product-card__count__items-current" data-counter>
+                1</div>
+              <div class="product-cards__product-card__count__items-control"
+                data-action="plus">+</div>
+            </div>
+            <div class="product-cards__product-card__bottom">
+              <div class="product-cards__product-card__bottom__price">
+                <p class="product-cards__product-card__bottom__price__label">
+                  &#8364;1.65</p>
+                <p class="product-cards__product-card__bottom__price__value">
+                  €1.90</p>
+              </div>
+              <div class="product-cards__product-card__bottom__buttons">
+                <button type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                  href="#" data-qa="heart">
+                </button>
+                <button type="button"
+                  class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                  href="#" data-cart>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-cards__product-card product-card" data-id="${product.id}"
+              data-index="${product.index}">
+              <img src="./images/Rectangle 19 (2).png" alt=""
+                class="product-cards__product-card__img">
+              <h3 class="product-cards__product-card__title">
+                <a href="/sparkleImage/details.html">CADBURY FINGERS MILK CHOCLATE</a>
+              </h3>
+              <div class="product-cards__product-card__count">
+                <div class="product-cards__product-card__count__items-control"
+                  data-action="minus">-</div>
+                <div class="product-cards__product-card__count__items-current" data-counter>
+                  1</div>
+                <div class="product-cards__product-card__count__items-control"
+                  data-action="plus">+</div>
+              </div>
+              <div class="product-cards__product-card__bottom">
+                <div class="product-cards__product-card__bottom__price">
+                  <p class="product-cards__product-card__bottom__price__label">
+                    &#8364;1.65</p>
+                  <p class="product-cards__product-card__bottom__price__value">
+                    €1.90</p>
+                </div>
+                <div class="product-cards__product-card__bottom__buttons">
+                  <button type="button"
+                    class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                    href="#" data-qa="heart">
+                  </button>
+                  <button type="button"
+                    class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                    href="#" data-cart>
+                  </button>
+                </div>
+              </div>
+          </div>
+              <div class="product-cards__product-card product-card" data-id="${product.id}"
+                data-index="${product.index}">
+                <img src="./images/Rectangle 19.png" alt=""
+                  class="product-cards__product-card__img">
+                <h3 class="product-cards__product-card__title">
+                  <a href="/sparkleImage/details.html">NATURE VALLEY CRUCNHY OATS</a>
+                </h3>
+                <div class="product-cards__product-card__count">
+                  <div class="product-cards__product-card__count__items-control"
+                    data-action="minus">-</div>
+                  <div class="product-cards__product-card__count__items-current" data-counter>
+                    1</div>
+                  <div class="product-cards__product-card__count__items-control"
+                    data-action="plus">+</div>
+                </div>
+                <div class="product-cards__product-card__bottom">
+                  <div class="product-cards__product-card__bottom__price">
+                    <p class="product-cards__product-card__bottom__price__label">
+                      &#8364;1.65</p>
+                    <p class="product-cards__product-card__bottom__price__value">
+                      €1.90</p>
+                  </div>
+                  <div class="product-cards__product-card__bottom__buttons">
+                    <button type="button"
+                      class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                      href="#" data-qa="heart">
+                    </button>
+                    <button type="button"
+                      class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                      href="#" data-cart>
+                    </button>
+                  </div>
+                </div>
+              </div>
+                <div class="product-cards__product-card product-card" data-id="${product.id}"
+                  data-index="${product.index}">
+                  <img src="./images/Rectangle 19 (1).png" alt=""
+                    class="product-cards__product-card__img">
+                  <h3 class="product-cards__product-card__title">
+                    <a href="/sparkleImage/details.html">REESES PEANUT BUTTER MINIS 150G</a>
+                  </h3>
+                  <div class="product-cards__product-card__count">
+                    <div class="product-cards__product-card__count__items-control"
+                      data-action="minus">-</div>
+                    <div class="product-cards__product-card__count__items-current" data-counter>
+                      1</div>
+                    <div class="product-cards__product-card__count__items-control"
+                      data-action="plus">+</div>
+                  </div>
+                  <div class="product-cards__product-card__bottom">
+                    <div class="product-cards__product-card__bottom__price">
+                      <p class="product-cards__product-card__bottom__price__label">
+                        &#8364;1.65</p>
+                      <p class="product-cards__product-card__bottom__price__value">
+                        €1.90</p>
+                    </div>
+                    <div class="product-cards__product-card__bottom__buttons">
+                      <button type="button"
+                        class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                        href="#" data-qa="heart">
+                      </button>
+                      <button type="button"
+                        class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                        href="#" data-cart>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                  <div class="product-cards__product-card product-card" data-id="${product.id}"
+                    data-index="${product.index}">
+                    <img src="./images/Rectangle 19 (1).png" alt=""
+                      class="product-cards__product-card__img">
+                    <h3 class="product-cards__product-card__title">
+                      <a href="/sparkleImage/details.html">REESES PEANUT BUTTER MINIS 150G</a>
+                    </h3>
+                    <div class="product-cards__product-card__count">
+                      <div class="product-cards__product-card__count__items-control"
+                        data-action="minus">-</div>
+                      <div class="product-cards__product-card__count__items-current" data-counter>
+                        1</div>
+                      <div class="product-cards__product-card__count__items-control"
+                        data-action="plus">+</div>
+                    </div>
+                    <div class="product-cards__product-card__bottom">
+                      <div class="product-cards__product-card__bottom__price">
+                        <p class="product-cards__product-card__bottom__price__label">
+                          &#8364;1.65</p>
+                        <p class="product-cards__product-card__bottom__price__value">
+                          €1.90</p>
+                      </div>
+                      <div class="product-cards__product-card__bottom__buttons">
+                        <button type="button"
+                          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                          href="#" data-qa="heart">
+                        </button>
+                        <button type="button"
+                          class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                          href="#" data-cart>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="product-cards__product-card product-card" data-id="${product.id}"
+                      data-index="${product.index}">
+                      <img src="./images/Rectangle 19 (1).png" alt=""
+                        class="product-cards__product-card__img">
+                      <h3 class="product-cards__product-card__title">
+                        <a href="/sparkleImage/details.html">REESES PEANUT BUTTER MINIS 150G</a>
+                      </h3>
+                      <div class="product-cards__product-card__count">
+                        <div class="product-cards__product-card__count__items-control"
+                          data-action="minus">-</div>
+                        <div class="product-cards__product-card__count__items-current" data-counter>
+                          1</div>
+                        <div class="product-cards__product-card__count__items-control"
+                          data-action="plus">+</div>
+                      </div>
+                      <div class="product-cards__product-card__bottom">
+                        <div class="product-cards__product-card__bottom__price">
+                          <p class="product-cards__product-card__bottom__price__label">
+                            &#8364;1.65</p>
+                          <p class="product-cards__product-card__bottom__price__value">
+                            €1.90</p>
+                        </div>
+                        <div class="product-cards__product-card__bottom__buttons">
+                          <button type="button"
+                            class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--heart"
+                            href="#" data-qa="heart">
+                          </button>
+                          <button type="button"
+                            class="product-cards__product-card__bottom__buttons__link product-cards__product-card__bottom__buttons__link--cart"
+                            href="#" data-cart>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+        </section>
         <div id="pagination" >
           <ul class="pagination"></ul>
         </div>
